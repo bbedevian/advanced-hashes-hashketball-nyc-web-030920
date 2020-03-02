@@ -244,6 +244,7 @@ def winning_team
       end 
     end 
   end 
+  binding.pry 
    if nets_points > hornets_points
      return "Brooklyn Nets"
    else 
