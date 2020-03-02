@@ -223,6 +223,32 @@ end
   end 
  
 def winning_team
+  nets_points = 0 
+  hornets_points = 0 
+  game_hash.each do |home_away, team|
+    if home_away == "home"
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          nets_points += player[:points]
+        end
+      end 
+    end 
+      
+    else
+      team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          hornets_points += player[:points]
+        end 
+      end 
+    end 
+  end 
+   if nets_points > hornets_points
+     return "Brooklyn Nets"
+   else 
+     return "Charlotte Hornets"
+   end 
   
 end 
   
