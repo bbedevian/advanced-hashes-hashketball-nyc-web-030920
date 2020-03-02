@@ -226,7 +226,7 @@ def winning_team
   nets_points = 0 
   hornets_points = 0 
   game_hash.each do |home_away, team|
-    if home_away == "home"
+    if home_away == :home
     team.each do |attribute, data|
       if attribute == :players
         data.each do |player|
