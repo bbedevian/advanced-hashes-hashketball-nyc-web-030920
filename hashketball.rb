@@ -249,9 +249,8 @@ def winning_team
    else 
      return "Charlotte Hornets"
    end 
-  
 end 
-  
+end   
 
 
 
